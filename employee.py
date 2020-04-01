@@ -10,7 +10,7 @@ def get_employee_data():
     last_name = input("What is your last name?\n ")
     email = input("What is your email address?\n ")
     random_text = "".join(random.choice(char) for i in range(5))
-    password = first_name[0:2] + random_text + last_name[-2:]
+    password = first_name[0:2]  + last_name[-2:] + random_text
     ans = ""
     while (ans != "n" and ans != "y"):
         ans = input(f"Do you prefer this '{password}' as password? (Y)es / (N)o ").lower()
